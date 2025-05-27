@@ -1,0 +1,259 @@
+
+.about-container{
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+.about {
+  padding: 6rem 0;
+  background: #f8fafc;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text .section-title {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, #2dd4bf, #06b6d4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.feature-content p {
+  color: #64748b;
+}
+
+.about-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2dd4bf;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.stat-label {
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.stat-bar {
+  width: 100%;
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.stat-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2dd4bf, #06b6d4);
+  border-radius: 2px;
+  animation: fillBar 2s ease-out;
+}
+
+.stat-fill-100 {
+  width: 100%;
+}
+
+.stat-fill-85 {
+  width: 85%;
+}
+
+.stat-fill-70 {
+  width: 70%;
+}
+
+.stat-fill-99 {
+  width: 99%;
+}
+
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+}
+
+.tech-showcase {
+  display: flex;
+  justify-content: center;
+}
+
+.tech-orbit {
+  padding-top: 70px;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.tech-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.tech-center img {
+  height: 40px;
+}
+
+.tech-planet {
+  position: absolute;
+  background: linear-gradient(45deg, #2dd4bf, #06b6d4);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  animation: orbit 20s linear infinite;
+}
+
+.tech-planet-1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 0s;
+}
+
+.tech-planet-2 {
+  top: 25%;
+  right: 0;
+  animation-delay: -3.33s;
+}
+
+.tech-planet-3 {
+  bottom: 25%;
+  right: 0;
+  animation-delay: -6.66s;
+}
+
+.tech-planet-4 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: -10s;
+}
+
+.tech-planet-5 {
+  bottom: 25%;
+  left: 0;
+  animation-delay: -13.33s;
+}
+
+.tech-planet-6 {
+  top: 25%;
+  left: 0;
+  animation-delay: -16.66s;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(150px) rotate(-360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-orbit {
+    width: 250px;
+    height: 250px;
+  }
+
+  .tech-planet {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

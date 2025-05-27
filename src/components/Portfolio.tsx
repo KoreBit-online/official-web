@@ -1,0 +1,90 @@
+"use client"
+
+import { useState } from "react"
+import "../styles/portfolio.css"
+
+const projects = [
+  {
+    id: 1,
+    title: "Green Beat Ceylon",
+    category: "Web Development",
+    image: "/placeholder.svg?height=300&width=400",
+    description: "Modern e-commerce solution with AI recommendations",
+    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    link: "#",
+  }
+]
+
+const categories = ["All", "Web Development"]
+
+export default function Portfolio() {
+  const [activeCategory, setActiveCategory] = useState("All")
+  const [filteredProjects, setFilteredProjects] = useState(projects)
+
+  const filterProjects = (category: string) => {
+    setActiveCategory(category)
+    if (category === "All") {
+      setFilteredProjects(projects)
+    } else {
+      setFilteredProjects(projects.filter((project) => project.category === category))
+    }
+  }
+
+  return (
+    <section id="portfolio" className="portfolio">
+      <div className="portfolio-container">
+        <div className="section-header">
+          <div className="section-badge">Our Work</div>
+          <h2 className="section-title">Featured Projects</h2>
+          <p className="section-subtitle">
+            Discover our latest projects and see how we've helped businesses achieve their goals
+          </p>
+        </div>
+
+        <div className="portfolio-filters">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={`filter-btn ${activeCategory === category ? "active" : ""}`}
+              onClick={() => filterProjects(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        <div className="portfolio-grid">
+          {filteredProjects.map((project, index) => (
+            <div key={project.id} className="portfolio-item" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className="project-image">
+                <img src={project.image || "/placeholder.svg"} alt={project.title} />
+                <div className="project-overlay">
+                  <div className="project-actions">
+                    <button className="action-btn">👁️</button>
+                    <button className="action-btn">🔗</button>
+                  </div>
+                </div>
+              </div>
+              <div className="project-content">
+                <div className="project-category">{project.category}</div>
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+                <div className="project-technologies">
+                  {project.technologies.map((tech, techIndex) => (
+                    <span key={techIndex} className="tech-tag">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="portfolio-cta">
+          <button className="btn btn-primary btn-lg">View All Projects</button>
+        </div>
+      </div>
+    </section>
+  )
+}
