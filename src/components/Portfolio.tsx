@@ -95,10 +95,6 @@ export default function Portfolio() {
             ))}
           </div>
         </div>
-
-        <div className="portfolio-cta">
-          <button className="btn btn-primary btn-lg">View All Projects</button>
-        </div>
       </div>
     </section>
   )
