@@ -119,40 +119,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="footer-section footer-newsletter">
-              <h4 className="footer-title">Stay Updated</h4>
-              <p className="newsletter-description">
-                Subscribe to our newsletter for the latest updates, insights, and industry trends.
-              </p>
-              <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
-                <div className="newsletter-input">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                  <button type="submit" className="newsletter-btn">
-                    <span>→</span>
-                  </button>
-                </div>
-              </form>
-              <div className="newsletter-benefits">
-                <div className="benefit-item">
-                  <span className="benefit-icon">✓</span>
-                  <span>Weekly tech insights</span>
-                </div>
-                <div className="benefit-item">
-                  <span className="benefit-icon">✓</span>
-                  <span>Exclusive content</span>
-                </div>
-                <div className="benefit-item">
-                  <span className="benefit-icon">✓</span>
-                  <span>No spam, unsubscribe anytime</span>
-                </div>
-              </div>
-            </div>
+            {/* No newsletter section: layout auto-balances columns */}
           </div>
         </div>
       </div>
