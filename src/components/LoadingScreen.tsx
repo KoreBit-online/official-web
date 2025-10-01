@@ -1,13 +1,15 @@
 "use client"
 
 import "../styles/loading.css"
+import LOGO from "../images/logo-dark.png";
+
 
 export default function LoadingScreen() {
   return (
     <div className="loading-screen">
       <div className="loading-content">
         <div className="loading-logo">
-          <img src="/logo-light.png" alt="KoreBit" />
+          <img src={LOGO} alt="KoreBit" />
         </div>
         <div className="loading-animation">
           <div className="loading-bar"></div>

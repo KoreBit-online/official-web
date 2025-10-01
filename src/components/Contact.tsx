@@ -44,7 +44,7 @@ export default function Contact() {
               <div className="contact-icon">📧</div>
               <div className="contact-details">
                 <h4>Email Us</h4>
-                <p>hello@korebit.live</p>
+                <p>korebit@gmail.com</p>
               </div>
             </div>
 
@@ -52,7 +52,6 @@ export default function Contact() {
               <div className="contact-icon">📱</div>
               <div className="contact-details">
                 <h4>Call Us</h4>
-                <p>+94 703911990</p>
                 <p>+94 703911990</p>
 
               </div>
