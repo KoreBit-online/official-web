@@ -2,31 +2,11 @@
 
 import type React from "react"
 
-import { useState } from "react"
+
 import "../styles/contact.css"
 
+
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    service: "",
-    message: "",
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
-
   return (
     <section id="contact" className="contact">
       <div className="contact-container">
@@ -58,26 +38,26 @@ export default function Contact() {
             </div>
           </div>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-form" action="https://formsubmit.co/korebit@gmail.com" method="POST">
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="name">Full Name *</label>
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+                <input type="text" id="name" name="name" required />
               </div>
               <div className="form-group">
                 <label htmlFor="email">Email Address *</label>
-                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+                <input type="email" id="email" name="email" required />
               </div>
             </div>
 
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="company">Company</label>
-                <input type="text" id="company" name="company" value={formData.company} onChange={handleChange} />
+                <input type="text" id="company" name="company" />
               </div>
               <div className="form-group">
                 <label htmlFor="service">Service Interested</label>
-                <select id="service" name="service" value={formData.service} onChange={handleChange}>
+                <select id="service" name="service">
                   <option value="">Select a service</option>
                   <option value="web-development">Web Development</option>
                   {/* <option value="mobile-apps">Mobile Apps</option>
@@ -95,8 +75,6 @@ export default function Contact() {
                 id="message"
                 name="message"
                 rows={6}
-                value={formData.message}
-                onChange={handleChange}
                 placeholder="Tell us about your project, goals, and requirements..."
                 required
               />
