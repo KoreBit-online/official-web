@@ -17,7 +17,7 @@ export default function About() {
       projects: 5,
       clients: 100,
       // experience: 5,
-      // satisfaction: 99,
+       satisfaction: 99,
     }
 
     const duration = 2000

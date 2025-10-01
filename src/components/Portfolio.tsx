@@ -3,6 +3,7 @@
 import { useState } from "react"
 import "../styles/portfolio.css"
 import GBC from "../images/gbc.jpeg";
+import Hewa from "../images/hewa.png";
 
 const projects = [
   {
@@ -13,17 +14,17 @@ const projects = [
     description: "Modern Marketing website for Green Beat Ceylon",
     link: "https://www.greenbeatceylon.com/",
   },
-  // {
-  //   id: 2,
-  //   title: "KoreBit Official Web",
-  //   category: "Company Website",
-  //   image: GBC,
-  //   description: "Official marketing website for KoreBit software company.",
-  //   link: "https://korebit.com/",
-  // }
+  {
+    id: 2,
+    title: "Car Dealership Management System",
+    category: "Management System",
+    image: Hewa,
+    description: "Car dealership management system for Hewa Motors. keep track of inventory, sales, and customer data all in one place.",
+    link: "https://hewa-dealership.vercel.app/",
+  }
 ]
 
-const categories = ["All", "Marketing Website"]
+const categories = ["All", "Marketing Website", "Management System"]
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState("All")
