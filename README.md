@@ -1,46 +1,57 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# KoreBit Official Website
 
-## Available Scripts
+Welcome to the open source repository for the official marketing website of KoreBit, a software company specializing in innovative digital solutions.
 
-In the project directory, you can run:
+## About KoreBit
 
-### `npm start`
+KoreBit is dedicated to delivering high-quality software products and services to help businesses grow and succeed in the digital era. Our team combines technical expertise with creative vision to build impactful web, mobile, and cloud solutions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Overview
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This repository contains the source code for KoreBit's marketing website. The site showcases our services, portfolio, team, and company values, and serves as a hub for clients and partners to learn more about us.
 
-### `npm test`
+## Features
+- Responsive, modern design
+- Service and portfolio sections
+- Team and testimonials
+- Contact form
+- SEO-friendly and accessible
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
+- Node.js (v16 or higher recommended)
+- npm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
+1. Clone the repository:
+	```sh
+	git clone https://github.com/KoreBit-online/official-web.git
+	cd official-web
+	```
+2. Install dependencies:
+	```sh
+	npm install
+	```
+3. Start the development server:
+	```sh
+	npm start
+	```
+4. Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We welcome contributions! Please read our [Contributing Guide](CONTRIBUTING.md) for details on how to get involved.
 
-### `npm run eject`
+## License
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This project is open source and available under the [MIT License](LICENSE).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contact
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+For business inquiries or support, please visit [korebit.com](https://korebit.com) or contact us at info@korebit.com.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+*Empowering your business with technology.*
