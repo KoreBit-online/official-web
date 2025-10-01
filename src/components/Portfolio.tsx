@@ -2,20 +2,28 @@
 
 import { useState } from "react"
 import "../styles/portfolio.css"
+import GBC from "../images/gbc.jpeg";
 
 const projects = [
   {
     id: 1,
     title: "Green Beat Ceylon",
-    category: "Web Development",
-    image: "/placeholder.svg?height=300&width=400",
-    description: "Modern e-commerce solution with AI recommendations",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    link: "#",
-  }
+    category: "Marketing Website",
+    image: GBC,
+    description: "Modern Marketing website for Green Beat Ceylon",
+    link: "https://www.greenbeatceylon.com/",
+  },
+  // {
+  //   id: 2,
+  //   title: "KoreBit Official Web",
+  //   category: "Company Website",
+  //   image: GBC,
+  //   description: "Official marketing website for KoreBit software company.",
+  //   link: "https://korebit.com/",
+  // }
 ]
 
-const categories = ["All", "Web Development"]
+const categories = ["All", "Marketing Website"]
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState("All")
@@ -53,32 +61,38 @@ export default function Portfolio() {
           ))}
         </div>
 
-        <div className="portfolio-grid">
-          {filteredProjects.map((project, index) => (
-            <div key={project.id} className="portfolio-item" style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className="project-image">
-                <img src={project.image || "/placeholder.svg"} alt={project.title} />
-                <div className="project-overlay">
-                  <div className="project-actions">
-                    <button className="action-btn">👁️</button>
-                    <button className="action-btn">🔗</button>
+        <div className="portfolio-grid-wrapper">
+          <div className="portfolio-grid">
+            {filteredProjects.map((project, index) => (
+              <div key={project.id} className="portfolio-item" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="project-image">
+                  <img src={project.image || "/placeholder.svg"} alt={project.title} />
+                  <div className="project-overlay">
+                    <div className="project-actions">
+                      <button className="action-btn">👁️</button>
+                      <button className="action-btn">🔗</button>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="project-content">
-                <div className="project-category">{project.category}</div>
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                <div className="project-technologies">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span key={techIndex} className="tech-tag">
-                      {tech}
-                    </span>
-                  ))}
+                <div className="project-content">
+                  <div className="project-category">{project.category}</div>
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-description">{project.description}</p>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      className="btn btn-secondary btn-sm project-link-btn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ display: 'inline-block', marginTop: '1rem' }}
+                    >
+                      Visit Website
+                    </a>
+                  )}
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <div className="portfolio-cta">
